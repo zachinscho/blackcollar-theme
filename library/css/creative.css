@@ -152,6 +152,9 @@ header {
             max-width: 80%;
             font-size: 18px; } }
 
+#about .btn-xl {
+  margin: 0 10px; }
+
 .section-heading {
   margin-top: 0; }
 

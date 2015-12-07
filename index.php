@@ -14,7 +14,7 @@
         </div>
     </header>
 
-    <section class="bg-primary" id="about">
+    <section class="bg-dark" id="about">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
@@ -23,53 +23,6 @@
                     <p class="text-faded">We're a full service DIY screen printing shop located in Baltimore, MD. We offer everything from basic t-shirt printing to album packaging, posters and eco-friendly printing.</p>
                     <a href="#" class="btn btn-default btn-xl">Start an Order</a>
                     <a href="#processModal" class="btn btn-default btn-xl" data-toggle="modal">Our Process</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="services">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Our Services and Rates</h2>
-                    <hr class="primary">
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-star-o wow bounceIn text-primary"></i>
-                        <h3>T-Shirts</h3>
-                        <p class="text-muted">We have lots of options to choose from including USA and Union made shirts.</p>
-                        <a href="#tshirt-rates">View Rates</a> 
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-soccer-ball-o wow bounceIn text-primary" data-wow-delay=".1s"></i>
-                        <h3>More Apparel</h3>
-                        <p class="text-muted">We've got Hoodies, Jackets/Windbreakers, Atheletic Apparel, Tanks and more.</p>
-                        <a href="#moreapparel-rates">View Rates</a> 
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-music wow bounceIn text-primary" data-wow-delay=".2s"></i>
-                        <h3>Posters and Covers</h3>
-                        <p class="text-muted">We can print show posters and the cover packaging for your album art as well.</p>
-                        <a href="#poster-rates">View Rates</a> 
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-heart wow bounceIn text-primary" data-wow-delay=".3s"></i>
-                        <h3>Other Stuff</h3>
-                        <p class="text-muted">We've got Patches, Koozies, Totes and even Truck Decals. Let us know what you need.</p>
-                        <a href="#other-rates">Email Us for Rates</a> 
-                    </div>
                 </div>
             </div>
         </div>
@@ -189,8 +142,55 @@
             </div>
         </div>
     </section>
+    
+    <section id="services" class="bg-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Our Services and Rates</h2>
+                    <hr class="primary">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <!-- <i class="fa fa-4x fa-star-o wow bounceIn text-primary"></i> -->
+                        <h3>T-Shirts</h3>
+                        <p class="text-muted">We have lots of options to choose from including USA and Union made shirts.</p>
+                        <a href="#tshirt-rates">View Rates</a> 
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <!-- <i class="fa fa-4x fa-soccer-ball-o wow bounceIn text-primary" data-wow-delay=".1s"></i> -->
+                        <h3>More Apparel</h3>
+                        <p class="text-muted">We've got Hoodies, Jackets/Windbreakers, Atheletic Apparel, Tanks and more.</p>
+                        <a href="#moreapparel-rates">View Rates</a> 
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <!-- <i class="fa fa-4x fa-music wow bounceIn text-primary" data-wow-delay=".2s"></i> -->
+                        <h3>Posters and Covers</h3>
+                        <p class="text-muted">We can print show posters and the cover packaging for your album art as well.</p>
+                        <a href="#poster-rates">View Rates</a> 
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <!-- <i class="fa fa-4x fa-heart wow bounceIn text-primary" data-wow-delay=".3s"></i> -->
+                        <h3>Other Stuff</h3>
+                        <p class="text-muted">We've got Patches, Koozies, Totes and even Truck Decals. Let us know what you need.</p>
+                        <a href="#other-rates">Email Us for Rates</a> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <aside class="bg-dark">
+    <aside>
         <div class="container text-center">
             <div class="call-to-action">
                 <h2>Place an order with us!</h2>
@@ -199,7 +199,7 @@
         </div>
     </aside>
 
-    <section id="contact">
+    <section id="contact" class="bg-dark">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">

@@ -147,7 +147,7 @@ aside {
 	
 	    &.affix .navbar-header .navbar-brand {
 	        font-size: 14px;
-	        color: #f05f40;
+	        color: #222;
 	    }
 	
 	    &.affix .navbar-header .navbar-brand:hover,
@@ -360,6 +360,36 @@ header {
 		
 		img {
 		    margin-bottom: 30px;
+		}
+		
+		.cycle-slideshow {
+			.cycle-prev, .cycle-next {
+				background-image: url('../fancybox/fancybox_sprite.png');
+				position: absolute;
+				top: 50%;
+				width: 36px;
+				height: 34px;
+				margin-top: -18px;
+				cursor: pointer;
+				z-index: 8040;
+				visibility: hidden;
+			}
+			
+			.cycle-prev {
+				background-position: 0 -36px;
+			}
+			
+			.cycle-next {
+				background-position: 0 -72px;
+				right: 0;
+			}
+			
+			&:hover {
+				.cycle-prev, .cycle-next {
+					visibility: visible;	
+				}
+				
+			}
 		}
 	}
 	

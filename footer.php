@@ -13,7 +13,9 @@
 	    <script src="<?php  echo $templateDirectory;  ?>/library/js/libs/wow.min.js"></script>
 	
 	    <!-- Custom Theme JavaScript -->
-	    <script src="<?php  echo $templateDirectory;  ?>/library/js/libs/creative.js"></script>
+	    <script src="<?php  echo $templateDirectory;  ?>/library/js/creative.js"></script>
+	    <script src="<?php  echo $templateDirectory;  ?>/library/js/plugins.js"></script>
+	    <script src="<?php  echo $templateDirectory;  ?>/library/js/libs/cycle-plugin.js"></script>
 
 	</body>
 

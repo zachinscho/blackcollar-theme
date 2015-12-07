@@ -93,7 +93,7 @@ aside {
         background-color: #fff; }
       .navbar-default.affix .navbar-header .navbar-brand {
         font-size: 14px;
-        color: #f05f40; }
+        color: #222; }
       .navbar-default.affix .navbar-header .navbar-brand:hover, .navbar-default.affix .navbar-header .navbar-brand:focus {
         color: #eb3812; }
       .navbar-default.affix .nav > li > a, .navbar-default.affix .nav > li > a:focus {
@@ -236,6 +236,23 @@ header {
     margin-bottom: 30px; }
   .portfolio-modal .modal-content img {
     margin-bottom: 30px; }
+  .portfolio-modal .modal-content .cycle-slideshow .cycle-prev, .portfolio-modal .modal-content .cycle-slideshow .cycle-next {
+    background-image: url('../fancybox/fancybox_sprite.png');
+    position: absolute;
+    top: 50%;
+    width: 36px;
+    height: 34px;
+    margin-top: -18px;
+    cursor: pointer;
+    z-index: 8040;
+    visibility: hidden; }
+  .portfolio-modal .modal-content .cycle-slideshow .cycle-prev {
+    background-position: 0 -36px; }
+  .portfolio-modal .modal-content .cycle-slideshow .cycle-next {
+    background-position: 0 -72px;
+    right: 0; }
+  .portfolio-modal .modal-content .cycle-slideshow:hover .cycle-prev, .portfolio-modal .modal-content .cycle-slideshow:hover .cycle-next {
+    visibility: visible; }
 .portfolio-modal .close-modal {
   position: absolute;
   top: 25px;

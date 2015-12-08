@@ -13,7 +13,7 @@ body {
 
 hr {
     max-width: 50px;
-    border-color: #f05f40;
+    border-color: #fff;
     border-width: 3px;
 }
 
@@ -22,7 +22,7 @@ hr.light {
 }
 
 a {
-    color: #f05f40;
+    color: #3694d1;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
@@ -30,7 +30,7 @@ a {
 
 a:hover,
 a:focus {
-    color: #eb3812;
+    color: #175daf;
 }
 
 h1,
@@ -49,7 +49,7 @@ p {
 }
 
 .bg-primary {
-    background-color: #f05f40;
+    background-color: #3694d1;
 }
 
 .bg-dark {
@@ -73,6 +73,11 @@ aside {
     padding: 0;
 }
 
+.bc-sprite {
+	background-image: url('../images/bc_sprite.png');
+    background-image: url('../images/bc_sprite.svg');
+}
+
 .navbar-default {
     border-color: rgba(34,34,34,.05);
     font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
@@ -80,6 +85,7 @@ aside {
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
+    opacity: 0;
 	
 	.navbar-brand {
 	    text-transform: uppercase;
@@ -180,6 +186,7 @@ aside {
 		    transition: all .35s;
 	    }
 	    
+	    &.affix .nav > li.active>a:after,
 	    &.affix .nav > li>a:hover:after,
 	    &.affix .nav > li>a:focus:after,
 	    &.affix .navbar-header .navbar-brand:hover:after,
@@ -259,6 +266,30 @@ header {
     		}
     	}
 	}
+	
+	.scroll-button {
+	    width: 20px;
+	    height: 30px;
+	    position: absolute;
+	    bottom: 10%;
+	    left: 49%;
+	    margin-bottom: 12px;
+	    -webkit-transition: all 0.5s ease-out;
+	    -moz-transition: all 0.5s ease-out;
+	    -o-transition: all 0.5s ease-out;
+	    transition: all 0.5s ease-out;
+	    
+	    span {
+		    width: 12px;
+		    height: 30px;
+		    background-position: -29px -282px;
+		    display: block;
+	    }
+	    
+	    &:hover, &:focus, &:hover:focus {
+		    color: transparent;
+	    }
+	}
 }
 
 #about {
@@ -305,7 +336,7 @@ header {
 	    text-align: center;
 	    color: #fff;
 	    opacity: 0;
-	    background: rgba(240,95,64,.9);
+	    background: rgba(54,148,209,.9);
 	    -webkit-transition: all .35s;
 	    -moz-transition: all .35s;
 	    transition: all .35s;
@@ -379,6 +410,10 @@ header {
 		ul.list-inline {
 		    margin-top: 0;
 		    margin-bottom: 30px;
+		    
+		    li {
+			    display: block;
+		    }
 		}
 		
 		img {
@@ -424,6 +459,10 @@ header {
 	    height: 75px;
 	    background-color: transparent;
 	    cursor: pointer;
+	    
+	    @media(min-width:768px) {
+			position: fixed;    
+		}
 	    
 	    &:hover {
 		    opacity: .3;
@@ -472,9 +511,9 @@ header {
 }
 
 .btn-default {
-    border-color: #fff;
+    border-color: #eee;
     color: #222;
-    background-color: #fff;
+    background-color: #eee;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
@@ -486,9 +525,9 @@ header {
 .btn-default:active,
 .btn-default.active,
 .open > .dropdown-toggle.btn-default {
-    border-color: #ededed;
+    border-color: #ccc;
     color: #222;
-    background-color: #f2f2f2;
+    background-color: #ccc;
 }
 
 .btn-default:active,
@@ -525,9 +564,9 @@ fieldset[disabled] .btn-default.active {
 }
 
 .btn-primary {
-    border-color: #f05f40;
+    border-color: #222;
     color: #fff;
-    background-color: #f05f40;
+    background-color: #222;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
@@ -539,9 +578,9 @@ fieldset[disabled] .btn-default.active {
 .btn-primary:active,
 .btn-primary.active,
 .open > .dropdown-toggle.btn-primary {
-    border-color: #ed431f;
+    border-color: #000;
     color: #fff;
-    background-color: #ee4b28;
+    background-color: #000;
 }
 
 .btn-primary:active,
@@ -568,12 +607,12 @@ fieldset[disabled] .btn-primary:active,
 .btn-primary.disabled.active,
 .btn-primary[disabled].active,
 fieldset[disabled] .btn-primary.active {
-    border-color: #f05f40;
-    background-color: #f05f40;
+    border-color: #175daf;
+    background-color: #175daf;
 }
 
 .btn-primary .badge {
-    color: #f05f40;
+    color: #222;
     background-color: #fff;
 }
 
@@ -587,6 +626,63 @@ fieldset[disabled] .btn-primary.active {
 
 .btn-xl {
     padding: 15px 30px;
+}
+
+
+.fadeLoop {
+  animation: fade 2s forwards;
+  -webkit-animation: fade 2s forwards;
+  -moz-animation: fade 2s forwards;
+  -o-animation: fade 2s forwards;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-o-keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 ::-moz-selection {

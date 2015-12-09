@@ -463,5 +463,13 @@ img::-moz-selection {
   color: #fff;
   background: 0 0; }
 
+input {
+  text-align: center; }
+
+@media (min-width: 768px) {
+  .form-control {
+    width: 60%;
+    margin: 0 auto; } }
+
 body {
   webkit-tap-highlight-color: #222; }

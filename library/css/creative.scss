@@ -707,6 +707,17 @@ img::-moz-selection {
     background: 0 0;
 }
 
+input {
+	text-align: center;
+}
+
+.form-control {
+	@media(min-width:768px) {
+		width: 60%;
+		margin: 0 auto;	
+	}
+}
+
 body {
     webkit-tap-highlight-color: #222;
 }

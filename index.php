@@ -22,7 +22,7 @@
                     <h2 class="section-heading">About Black Collar</h2>
                     <hr class="light">
                     <p class="text-faded">We're a full service DIY screen printing shop located in Baltimore, MD. We offer everything from basic t-shirt printing to album packaging, posters and eco-friendly printing.</p>
-                    <a href="#" class="btn btn-default btn-xl">Start an Order</a>
+                    <a href="#order-form" data-toggle="modal" class="btn btn-default btn-xl">Start an Order</a>
                     <a href="#processModal" class="btn btn-default btn-xl" data-toggle="modal">Our Process</a>
                 </div>
             </div>
@@ -195,7 +195,7 @@
         <div class="container text-center">
             <div class="call-to-action">
                 <h2>Place an order with us!</h2>
-                <a href="#" class="btn btn-default btn-xl wow tada">Get Started</a>
+                <a href="#order-form" data-toggle="modal" class="btn btn-default btn-xl wow tada">Get Started</a>
             </div>
         </div>
     </aside>
@@ -797,10 +797,30 @@
             </div>
         </div>
     </div>
-
-
-
-
+    <!-- Our Rate Modal #3 -->
+    <div class="portfolio-modal modal fade" id="order-form" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <h2>Start an Order</h2>
+                            <p class="item-intro text-muted">Help us get started on your order quicker by filling out the form below or <a href="mailto:info@blackcollarprinting.com">Contact Us</a> directly if you're having trouble.</p>
+                            <?php echo do_shortcode('[contact-form-7 id="4" title="Get Started Form"]'); ?>
+							
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 <?php get_footer(); ?>

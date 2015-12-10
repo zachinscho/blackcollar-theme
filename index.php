@@ -797,7 +797,7 @@
             </div>
         </div>
     </div>
-    <!-- Our Rate Modal #3 -->
+    <!-- Start and Order Modal -->
     <div class="portfolio-modal modal fade" id="order-form" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
@@ -814,6 +814,72 @@
                             <h2>Start an Order</h2>
                             <p class="item-intro text-muted">Help us get started on your order quicker by filling out the form below or <a href="mailto:info@blackcollarprinting.com">Contact Us</a> directly if you're having trouble.</p>
                             <?php echo do_shortcode('[contact-form-7 id="4" title="Get Started Form"]'); ?>
+							
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Shop Modal -->
+    <div class="portfolio-modal modal fade" id="shop" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <h2>Black Collar Shop</h2>
+                            <p class="item-intro text-muted">Here are some items for sale that we've design and printed ourselves. <a href="mailto:info@blackcollarprinting.com">Contact Us</a> directly if you have any questions.</p>
+                            <div class="col-xs-12 col-md-6">
+	                            <div class="shop-img">
+	                            	<a href="<?php  echo $templateDirectory;  ?>/library/images/cure-shirt.jpg" class="fancybox">
+	                            		<img src="<?php  echo $templateDirectory;  ?>/library/images/cure-shirt.jpg" class="img-responsive" />
+										<div class="zoom"><span></span></div>
+	                        		</a>
+	                        	</div>
+	                        	<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+								<input type="hidden" name="cmd" value="_s-xclick">
+								<input type="hidden" name="hosted_button_id" value="W34MEDHYFFKGY">
+								<input type="hidden" name="on0" value="Sizes">
+								Sizes<br>
+								<select name="os0">
+									<option value="Small">Small </option>
+									<option value="Medium">Medium </option>
+									<option value="Large">Large </option>
+								</select><br>
+								<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+								<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+								</form>
+
+	                        </div>
+	                        <div class="col-xs-12 col-md-6">
+		                        <div class="shop-img">
+			                        <a href="<?php  echo $templateDirectory;  ?>/library/images/jd-shirt.jpg" class="fancybox">
+	                            		<img src="<?php  echo $templateDirectory;  ?>/library/images/jd-shirt.jpg" class="img-responsive" />
+										<div class="zoom"><span></span></div>
+	                            	</a>
+	                        	</div>
+	                        	<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+								<input type="hidden" name="cmd" value="_s-xclick">
+								<input type="hidden" name="hosted_button_id" value="W34MEDHYFFKGY">
+								<input type="hidden" name="on0" value="Sizes">
+								Sizes<br>
+								<select name="os0">
+									<option value="Small">Small </option>
+									<option value="Medium">Medium </option>
+									<option value="Large">Large </option>
+								</select><br>
+								<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+								<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+								</form>
+	                        </div>  
 							
                         </div>
                     </div>

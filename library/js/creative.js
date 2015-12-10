@@ -49,6 +49,7 @@
 
 $(document).ready(function() {
 	launchHomePage();
+	$(".fancybox").fancybox();
 });
 
 function launchHomePage(){

@@ -25,6 +25,10 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="<?php  echo $templateDirectory;  ?>/library/css/creative.css" type="text/css">
+    
+    <!-- Add fancyBox -->
+	<link rel="stylesheet" href="<?php  echo $templateDirectory;  ?>/library/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+	
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -66,7 +70,7 @@
                         <a class="page-scroll" href="#contact">Contact</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#shop">Shop</a>
+                        <a href="#shop" data-toggle="modal">Shop</a>
                     </li>
                 </ul>
             </div>

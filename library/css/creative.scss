@@ -718,6 +718,50 @@ input {
 	}
 }
 
+.shop-img {
+	position: relative;
+	line-height: 0;
+	display: block;
+}
+
+.fancybox {
+	
+	.zoom {
+		position: absolute;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    height: 100%;
+	    display: block;
+	    background-color: rgba(0, 0, 0, 0.5);
+	    opacity: 0;
+	    z-index: 999;
+	    -webkit-transition: opacity 500ms;
+	    -moz-transition: opacity 500ms;
+	    -o-transition: opacity 500ms;
+	    transition: opacity 500ms;
+	    
+	    span {
+		    background-image: url('../fancybox/zoom.png');
+		    background-size: 100% auto;
+		    width: 30px;
+		    height: 30px;
+		    display: block;
+		    position: absolute;
+		    top: 50%;
+		    left: 50%;
+		    transform: translate(-50%, -50%);
+	    }
+	}
+	
+	&:hover {
+		.zoom {
+			opacity: 1;
+			cursor: pointer;
+		}
+	}
+}
+
 body {
     webkit-tap-highlight-color: #222;
 }

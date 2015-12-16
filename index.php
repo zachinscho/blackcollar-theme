@@ -2,6 +2,7 @@
 	get_header(); 
 	$templateDirectory = get_bloginfo('template_directory'); 	
 ?>
+<?php while ( have_posts() ) : the_post(); ?>
 	 <header>
         <div class="header-content">
             <div class="header-content-inner">
@@ -19,9 +20,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">About Black Collar</h2>
+                    <h2 class="section-heading"><?php the_field('about_header'); ?></h2>
                     <hr class="light">
-                    <p class="text-faded">We're a full service DIY screen printing shop located in Baltimore, MD. We offer everything from basic t-shirt printing to album packaging, posters and eco-friendly printing.</p>
+                    <p class="text-faded"><?php the_field('about_description'); ?></p>
                     <a href="#order-form" data-toggle="modal" class="btn btn-default btn-xl">Start an Order</a>
                     <a href="#processModal" class="btn btn-default btn-xl" data-toggle="modal">Our Process</a>
                 </div>
@@ -148,7 +149,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Our Services and Rates</h2>
+                    <h2 class="section-heading"><?php the_field('services_header'); ?></h2>
                     <hr class="primary">
                 </div>
             </div>
@@ -159,7 +160,7 @@
                     <div class="service-box">
                         <!-- <i class="fa fa-4x fa-star-o wow bounceIn text-primary"></i> -->
                         <h3>T-Shirts</h3>
-                        <p class="text-faded">We have lots of options to choose from including USA and Union made shirts.</p>
+                        <p class="text-faded"><?php the_field('t-shirt_sub-head'); ?></p>
                         <a href="#tshirt-rates" data-toggle="modal">View Rates</a> 
                     </div>
                 </div>
@@ -167,7 +168,7 @@
                     <div class="service-box">
                         <!-- <i class="fa fa-4x fa-soccer-ball-o wow bounceIn text-primary" data-wow-delay=".1s"></i> -->
                         <h3>More Apparel</h3>
-                        <p class="text-faded">We've got Hoodies, Jackets/Windbreakers, Atheletic Apparel, Tanks and more.</p>
+                        <p class="text-faded"><?php the_field('more_apparel_sub-head'); ?></p>
                         <a href="#moreapparel-rates" data-toggle="modal">View Rates</a> 
                     </div>
                 </div>
@@ -175,7 +176,7 @@
                     <div class="service-box">
                         <!-- <i class="fa fa-4x fa-music wow bounceIn text-primary" data-wow-delay=".2s"></i> -->
                         <h3>Posters and Covers</h3>
-                        <p class="text-faded">We can print show posters and the cover packaging for your album art as well.</p>
+                        <p class="text-faded"><?php the_field('posters_sub-head'); ?></p>
                         <a href="#poster-rates" data-toggle="modal">View Rates</a> 
                     </div>
                 </div>
@@ -183,7 +184,7 @@
                     <div class="service-box">
                         <!-- <i class="fa fa-4x fa-heart wow bounceIn text-primary" data-wow-delay=".3s"></i> -->
                         <h3>Other Stuff</h3>
-                        <p class="text-faded">We've got Patches, Koozies, Totes and even Truck Decals. Let us know what you need.</p>
+                        <p class="text-faded"><?php the_field('other_stuff_sub-head'); ?></p>
                         <a href="mailto:info@blackcollarprinting.com">Email Us for Rates</a> 
                     </div>
                 </div>
@@ -204,9 +205,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">Let's Get In Touch!</h2>
+                    <h2 class="section-heading"><?php the_field('contact_header'); ?></h2>
                     <hr class="primary">
-                    <p>Ready to start your next project with us? <br>Give us a call or send us an email and we will get back to you as soon as possible!</p>
+                    <p><?php the_field('contact_description'); ?></p>
                 </div>
                 <!-- <div class="col-lg-4 col-lg-offset-2 text-center">
                     <i class="fa fa-phone fa-3x wow bounceIn"></i>
@@ -664,13 +665,11 @@
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
                             <!-- Project Details Go Here -->
-                            <h2>Our Process</h2>
-                            <p class="item-intro text-muted">All of our work is printed by hand in our basement studio in Charles Village, Baltimore.</p>
+                            <h2><?php the_field('process_header'); ?></h2>
+                            <p class="item-intro text-muted"><?php the_field('process_sub-head'); ?></p>
 	                            
-                            <img class="img-responsive img-centered" src="<?php  echo $templateDirectory;  ?>/library/images/process-img.jpg" alt="">
-                            <p>We're a small operation that puts pride into every job we take on. Quality and attention to detail are our strong suits.</p>
-                            <p>
-                                <strong>We are committed to providing our clients with the best products and service.</strong> We print on shirts made in the USA and offer Eco-Friendly printing options with water based inks and Union made apparel.</p>
+                            <img class="img-responsive img-centered" src="<?php the_field('process_image'); ?>" alt="" />
+                            <?php the_field('process_content'); ?>
                             <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
                     </div>
@@ -693,20 +692,10 @@
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
                             <!-- Project Details Go Here -->
-                            <h2>T-Shirt Rates</h2>
-                            <p class="item-intro text-muted">These are our starting rates for tshirts and screens.<br><a href="mailto:info@blackcollarprinting.com">Contact Us</a> for any special requests or questions.</p>
-                            <strong>- $6 PER SHIRT FOR 1 COLOR, 1 SIDED</strong><br>
-                        	<ul class="list-inline">
-                            	<li>*add $ 2 per shirt for specialty brands such as American Apparel or Alstyle</li>
-                            	<li>*add $1 per shirt for specialty sizes (XXL’s, youth sizes, etc.)</li>
-                            	<li>*add 50 cents per additional color, can do up to 4 (ie; $6.50 for a red and black print on white shirt)</li>
-                            	<li>* add $1 extra per additional side/print placement</li>
-                            </ul>
-                            <strong>- $20 screen set-up charge per screen</strong><br>
-                        	<ul class="list-inline">
-	                        	<li>* multicolor jobs require additional screens</li><br>
-	                        	<li>* will save screen for up to a year</li>
-	                        </ul>
+                            <h2><?php the_field('t-shirt_rates_header'); ?></h2>
+                            <p class="item-intro text-muted"><?php the_field('t-shirt_rates_sub-head'); ?></p>
+                            <?php the_field('t-shirt_rates_content'); ?>
+                            
                             <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
                     </div>
@@ -729,26 +718,9 @@
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
                             <!-- Project Details Go Here -->
-                            <h2>Rates for other apparel</h2>
-                            <p class="item-intro text-muted">These are our starting rates for Hoodies, Jackets/Windbreakers, Atheletic Apparel, Tanks and more. <a href="mailto:info@blackcollarprinting.com">Contact Us</a> for any special requests or questions.</p>
-                            <strong>HOODIES</strong><br>
-                        	<ul class="list-inline">
-                            	<li>- $16 each for 1 color <br>(add 50 cents per additional color)</li>
-                            	<li>- $18 each for zip up)</li>
-                            	<li>- $20 for screen set-up</li>
-                            </ul>
-                            <strong>LONG SLEEVE TEES</strong><br>
-                        	<ul class="list-inline">
-	                        	<li>- $10 each for 1 color<br>(add 50 cents per additional color)</li>
-	                        	<li>- $20 for screen set-up</li>
-	                        </ul>
-	                        <strong>OTHER SERVICES</strong> (upon request):<br>
-	                        <ul class="list-inline">
-		                        <li>- patches</li>
-		                        <li>- record covers</li>
-		                        <li>- truck decals</li>
-		                        <li>- koozies</li>
-		                    </ul>
+                            <h2><?php the_field('more_apparel_rates_header'); ?></h2>
+                            <p class="item-intro text-muted"><?php the_field('more_apparel_rates_sub-head'); ?></p>
+                            <?php the_field('more_apparel_rates_content'); ?>
                             <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
                     </div>
@@ -771,25 +743,10 @@
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
                             <!-- Project Details Go Here -->
-                            <h2>Rates for Posters and Covers</h2>
-                            <p class="item-intro text-muted">These are our starting rates to print show posters and the cover packaging for your album art. <a href="mailto:info@blackcollarprinting.com">Contact Us</a> for any special requests or questions.</p>
-                            <strong>POSTERS</strong><br>
-                        	<ul class="list-inline">
-                            	<li>- $4 each for 1 color on heavy card stock <br>(add 50 cents a print per additional color)</li>
-                            	<li>- $10 per screen set-up</li>
-                            	<li>- Can do up to 18x24p</li>
-                            </ul>
-                            <strong>DESIGN/ART</strong><br>
-                        	<ul class="list-inline">
-	                        	<li>- $25 per hour (upon request)</li>
-	                        </ul>
-	                        <strong>OTHER SERVICES</strong> (upon request):<br>
-	                        <ul class="list-inline">
-		                        <li>- patches</li>
-		                        <li>- record covers</li>
-		                        <li>- truck decals</li>
-		                        <li>- koozies</li>
-		                    </ul>
+                            <h2><?php the_field('posters_rates_header'); ?></h2>
+                            <p class="item-intro text-muted"><?php the_field('posters_rates_sub-head'); ?></p>
+                            <?php the_field('posters_rates_content'); ?>
+                            
                             <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
                     </div>
@@ -836,7 +793,7 @@
                         <div class="modal-body">
                             <!-- Project Details Go Here -->
                             <h2>Black Collar Shop</h2>
-                            <p class="item-intro text-muted">Here are some items for sale that we've design and printed ourselves. <a href="mailto:info@blackcollarprinting.com">Contact Us</a> directly if you have any questions.</p>
+                            <p class="item-intro text-muted">Here are some items for sale that we've design and printed ourselves. Orders are paid for and managed through our Paypal account. Free shipping to Baltimorons, $5 everywhere else. <a href="mailto:info@blackcollarprinting.com">Contact Us</a> directly if you have any questions.</p>
                             <div class="col-xs-12 col-md-6">
 	                            <div class="shop-img">
 	                            	<a href="<?php  echo $templateDirectory;  ?>/library/images/cure-shirt.jpg" class="fancybox">
@@ -888,6 +845,6 @@
         </div>
     </div>
 
-
+<?php endwhile; // end of the loop. ?>
 <?php get_footer(); ?>
 

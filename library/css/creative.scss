@@ -26,11 +26,17 @@ a {
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
-}
-
-a:hover,
-a:focus {
-    color: #175daf;
+    
+    &:hover, &:focus {
+	    color: #175daf;
+    }
+    
+    i {
+	    color: #fff;
+	    &:hover {
+		   color: #3694d1; 
+	    }
+    }
 }
 
 h1,
@@ -202,7 +208,7 @@ header {
     min-height: auto;
     text-align: center;
     color: #fff;
-    background-image: url(../images/header2.jpg);
+    background-color: #000;
     background-position: center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -493,6 +499,14 @@ header {
 	.modal-backdrop {
 	    display: none;
 	    opacity: 0;
+	}
+}
+
+#shop {
+	.modal-body {
+		.col-md-6 {
+			margin-bottom:20px;
+		}
 	}
 }
 

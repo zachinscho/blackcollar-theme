@@ -424,6 +424,12 @@ header {
 		
 		img {
 		    margin-bottom: 30px;
+		    width: 100%;
+		    height: auto;
+		    
+		    @media(min-width:768px) {
+			    width: auto;
+			}
 		}
 		
 		.cycle-slideshow {

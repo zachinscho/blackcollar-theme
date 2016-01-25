@@ -301,7 +301,12 @@ header {
     .portfolio-modal .modal-content ul.list-inline li {
       display: block; }
   .portfolio-modal .modal-content img {
-    margin-bottom: 30px; }
+    margin-bottom: 30px;
+    width: 100%;
+    height: auto; }
+    @media (min-width: 768px) {
+      .portfolio-modal .modal-content img {
+        width: auto; } }
   .portfolio-modal .modal-content .cycle-slideshow .cycle-prev, .portfolio-modal .modal-content .cycle-slideshow .cycle-next {
     background-image: url("../fancybox/fancybox_sprite.png");
     position: absolute;

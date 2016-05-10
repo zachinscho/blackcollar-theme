@@ -16,6 +16,10 @@
 	    <script src="<?php  echo $templateDirectory;  ?>/library/js/creative.js"></script>
 	    <script src="<?php  echo $templateDirectory;  ?>/library/js/plugins.js"></script>
 	    <script src="<?php  echo $templateDirectory;  ?>/library/js/libs/cycle-plugin.js"></script>
+	    
+	    <!-- Fancybox -->
+	    <script type="text/javascript" src="<?php  echo $templateDirectory;  ?>/library/fancybox/jquery.fancybox.js?v=2.1.5"></script>
+
 
 	</body>
 
